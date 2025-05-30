@@ -65,6 +65,7 @@ const translations = {
         caption3: "Perfect Smile ♡",
         caption4: "Pure Elegance ♡",
         caption5: "Unique Style ♡",
+        caption6: "Unique Beauty ♡",
         "photo-title1": "Natural Beauty ♡",
         "photo-desc1": "A smile that lights up everything",
         perfect: "✨ Perfect",
@@ -80,6 +81,9 @@ const translations = {
         "photo-title5": "Unique Style ♡",
         "photo-desc5": "Authentic personality",
         unique: "🌟 Unique",
+        "photo-title6": "Unique Beauty ♡",
+        "photo-desc6": "Her beauty is unique and special",
+        special: "✨ Special",
         "special-moments": "Special Moments",
         spring: "Spring",
         "spring-msg": "Like flowers that bloom, your beauty is natural and unique",
@@ -114,6 +118,7 @@ const translations = {
         caption3: "Sonrisa Perfecta ♡",
         caption4: "Elegancia Pura ♡",
         caption5: "Estilo Único ♡",
+        caption6: "Belleza Única ♡",
         "photo-title1": "Belleza Natural ♡",
         "photo-desc1": "Una sonrisa que ilumina todo",
         perfect: "✨ Perfecta",
@@ -129,6 +134,9 @@ const translations = {
         "photo-title5": "Estilo Único ♡",
         "photo-desc5": "Personalidad auténtica",
         unique: "🌟 Única",
+        "photo-title6": "Belleza Única ♡",
+        "photo-desc6": "Su belleza es única y especial",
+        special: "✨ Especial",
         "special-moments": "Momentos Especiales",
         spring: "Primavera",
         "spring-msg": "Como las flores que florecen, tu belleza es natural y única",
@@ -155,7 +163,7 @@ const translations = {
     }
 };
 
-let currentLanguage = 'en';
+let currentLanguage = 'es';
 
 // Mensajes dinámicos en ambos idiomas
 const dynamicMessages = {
@@ -203,6 +211,12 @@ const photoData = [
         title: "Estilo Único ♡",
         description: "Personalidad auténtica",
         likes: 174
+    },
+    {
+        src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro6.jpg-3u44sUPFibP1da1jRzBcM8WpcAkT1x.jpeg",
+        title: "Belleza Única ♡",
+        description: "Su belleza es única y especial",
+        likes: 0
     }
 ];
 
@@ -833,6 +847,19 @@ function changeSlide(direction) {
     dots[currentSlide].classList.add('active');
 }
 
+function setCurrentSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    currentSlide = n - 1;
+    
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
 // Inicializar contadores
 function initializeCounters() {
     // Contador de visitas
@@ -1002,6 +1029,11 @@ dynamicStyles.textContent = `
             opacity: 0;
             transform: scale(0) translateY(-20px);
         }
+    }
+
+    /* Animación especial para la nueva imagen */
+    .photo-card:nth-child(6) {
+        animation-delay: 1.2s;
     }
 `;
 document.head.appendChild(dynamicStyles);

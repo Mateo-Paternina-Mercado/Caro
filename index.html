@@ -60,9 +60,10 @@
     <div class="container">
         <div class="header">
             <h1 class="title">
-                <span class="letter">F</span>
-                <span class="letter">o</span>
+                <span class="letter">P</span>
+                <span class="letter">a</span>
                 <span class="letter">r</span>
+                <span class="letter">a</span>
                 <span class="letter"> </span>
                 <span class="letter">C</span>
                 <span class="letter">a</span>
@@ -71,12 +72,12 @@
                 <span class="letter"> </span>
                 <span class="letter">♡</span>
             </h1>
-            <p class="subtitle typing-text" data-text="A very special person" data-i18n-attr="data-text" data-i18n="subtitle">A very special person</p>
+            <p class="subtitle typing-text" data-text="Una persona muy especial" data-i18n-attr="data-text" data-i18n="subtitle">Una persona muy especial</p>
             <div class="message-container">
                 <p class="message" id="dynamicMessage" data-i18n="main-message">
-                    Each photo tells a story, each smile brightens the day. 
-                    You are someone incredibly special and these images are just a small reflection 
-                    of how wonderful you are. Thank you for being you, Caro. ✨
+                    Cada foto cuenta una historia, cada sonrisa ilumina el día. 
+                    Eres alguien increíblemente especial y estas imágenes son solo un pequeño reflejo 
+                    de lo maravillosa que eres. Gracias por ser tú, Caro. ✨
                 </p>
                 <div class="message-hearts">
                     <span class="floating-heart">💕</span>
@@ -91,23 +92,27 @@
             <div class="slideshow-wrapper">
                 <div class="slide active">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro1.jpg-uST8HPlZHebkwz334OTiyrqkZ6aY7Y.jpeg" alt="Caro 1">
-                    <div class="slide-caption" data-i18n="caption1">Natural Beauty ♡</div>
+                    <div class="slide-caption" data-i18n="caption1">Belleza Natural ♡</div>
                 </div>
                 <div class="slide">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro2.jpg-CFLet9wGWy3gEoeamwY9InzTFngjci.jpeg" alt="Caro 2">
-                    <div class="slide-caption" data-i18n="caption2">Infinite Sweetness ♡</div>
+                    <div class="slide-caption" data-i18n="caption2">Dulzura Infinita ♡</div>
                 </div>
                 <div class="slide">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro3.jpg-0AYcJQDX0611oWhQhgGb9xAeRQGgVa.jpeg" alt="Caro 3">
-                    <div class="slide-caption" data-i18n="caption3">Perfect Smile ♡</div>
+                    <div class="slide-caption" data-i18n="caption3">Sonrisa Perfecta ♡</div>
                 </div>
                 <div class="slide">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro4.jpg-o9YRE2rArKJnyKjWN3QD6UVfKcEeje.jpeg" alt="Caro 4">
-                    <div class="slide-caption" data-i18n="caption4">Pure Elegance ♡</div>
+                    <div class="slide-caption" data-i18n="caption4">Elegancia Pura ♡</div>
                 </div>
                 <div class="slide">
                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro5.jpg-QUAnkEKFoGw6atjyhbpEHEsINUL9nM.jpeg" alt="Caro 5">
-                    <div class="slide-caption" data-i18n="caption5">Unique Style ♡</div>
+                    <div class="slide-caption" data-i18n="caption5">Estilo Único ♡</div>
+                </div>
+                <div class="slide">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro6.jpg-3u44sUPFibP1da1jRzBcM8WpcAkT1x.jpeg" alt="Caro 6">
+                    <div class="slide-caption" data-i18n="caption6">Belleza Única ♡</div>
                 </div>
             </div>
             <div class="slideshow-nav">
@@ -115,11 +120,12 @@
                 <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
             </div>
             <div class="slideshow-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot active" onclick="setCurrentSlide(1)"></span>
+                <span class="dot" onclick="setCurrentSlide(2)"></span>
+                <span class="dot" onclick="setCurrentSlide(3)"></span>
+                <span class="dot" onclick="setCurrentSlide(4)"></span>
+                <span class="dot" onclick="setCurrentSlide(5)"></span>
+                <span class="dot" onclick="setCurrentSlide(6)"></span>
             </div>
         </div>
         
@@ -127,14 +133,14 @@
         <div class="gallery" id="mainGallery">
             <div class="photo-card" data-tilt>
                 <div class="card-glow"></div>
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro1.jpg-uST8HPlZHebkwz334OTiyrqkZ6aY7Y.jpeg" alt="Caro 1" class="photo" onclick="openModal(this.src, 0)">
+                <img src="caro1.jpg" alt="Caro 1" class="photo" onclick="openModal(this.src, 0)">
                 <div class="photo-overlay">
                     <div class="overlay-content">
-                        <h3 class="photo-title" data-i18n="photo-title1">Natural Beauty ♡</h3>
-                        <p class="photo-description" data-i18n="photo-desc1">A smile that lights up everything</p>
+                        <h3 class="photo-title" data-i18n="photo-title1">Belleza Natural ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc1">Una sonrisa que ilumina todo</p>
                         <div class="photo-stats">
                             <span class="stat">💕 <span class="like-count">127</span></span>
-                            <span class="stat" data-i18n="perfect">✨ Perfect</span>
+                            <span class="stat" data-i18n="perfect">✨ Perfecta</span>
                         </div>
                     </div>
                 </div>
@@ -142,11 +148,11 @@
             
             <div class="photo-card" data-tilt>
                 <div class="card-glow"></div>
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro2.jpg-CFLet9wGWy3gEoeamwY9InzTFngjci.jpeg" alt="Caro 2" class="photo" onclick="openModal(this.src, 1)">
+                <img src="caro2.jpg" alt="Caro 2" class="photo" onclick="openModal(this.src, 1)">
                 <div class="photo-overlay">
                     <div class="overlay-content">
-                        <h3 class="photo-title" data-i18n="photo-title2">Infinite Sweetness ♡</h3>
-                        <p class="photo-description" data-i18n="photo-desc2">Tenderness in every gesture</p>
+                        <h3 class="photo-title" data-i18n="photo-title2">Dulzura Infinita ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc2">Ternura en cada gesto</p>
                         <div class="photo-stats">
                             <span class="stat">💕 <span class="like-count">156</span></span>
                             <span class="stat" data-i18n="adorable">🥰 Adorable</span>
@@ -157,14 +163,14 @@
             
             <div class="photo-card" data-tilt>
                 <div class="card-glow"></div>
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro3.jpg-0AYcJQDX0611oWhQhgGb9xAeRQGgVa.jpeg" alt="Caro 3" class="photo" onclick="openModal(this.src, 2)">
+                <img src="caro3.jpg" alt="Caro 3" class="photo" onclick="openModal(this.src, 2)">
                 <div class="photo-overlay">
                     <div class="overlay-content">
-                        <h3 class="photo-title" data-i18n="photo-title3">Perfect Smile ♡</h3>
-                        <p class="photo-description" data-i18n="photo-desc3">Pure happiness</p>
+                        <h3 class="photo-title" data-i18n="photo-title3">Sonrisa Perfecta ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc3">Felicidad pura</p>
                         <div class="photo-stats">
                             <span class="stat">💕 <span class="like-count">203</span></span>
-                            <span class="stat" data-i18n="radiant">😊 Radiant</span>
+                            <span class="stat" data-i18n="radiant">😊 Radiante</span>
                         </div>
                     </div>
                 </div>
@@ -172,14 +178,14 @@
             
             <div class="photo-card" data-tilt>
                 <div class="card-glow"></div>
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro4.jpg-o9YRE2rArKJnyKjWN3QD6UVfKcEeje.jpeg" alt="Caro 4" class="photo" onclick="openModal(this.src, 3)">
+                <img src="caro4.jpg" alt="Caro 4" class="photo" onclick="openModal(this.src, 3)">
                 <div class="photo-overlay">
                     <div class="overlay-content">
-                        <h3 class="photo-title" data-i18n="photo-title4">Pure Elegance ♡</h3>
-                        <p class="photo-description" data-i18n="photo-desc4">Natural sophistication</p>
+                        <h3 class="photo-title" data-i18n="photo-title4">Elegancia Pura ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc4">Sofisticación natural</p>
                         <div class="photo-stats">
                             <span class="stat">💕 <span class="like-count">189</span></span>
-                            <span class="stat" data-i18n="queen">👑 Queen</span>
+                            <span class="stat" data-i18n="queen">👑 Reina</span>
                         </div>
                     </div>
                 </div>
@@ -187,14 +193,30 @@
             
             <div class="photo-card" data-tilt>
                 <div class="card-glow"></div>
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caro5.jpg-QUAnkEKFoGw6atjyhbpEHEsINUL9nM.jpeg" alt="Caro 5" class="photo" onclick="openModal(this.src, 4)">
+                <img src="caro5.jpg" alt="Caro 5" class="photo" onclick="openModal(this.src, 4)">
                 <div class="photo-overlay">
                     <div class="overlay-content">
-                        <h3 class="photo-title" data-i18n="photo-title5">Unique Style ♡</h3>
-                        <p class="photo-description" data-i18n="photo-desc5">Authentic personality</p>
+                        <h3 class="photo-title" data-i18n="photo-title5">Estilo Único ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc5">Personalidad auténtica</p>
                         <div class="photo-stats">
                             <span class="stat">💕 <span class="like-count">174</span></span>
-                            <span class="stat" data-i18n="unique">🌟 Unique</span>
+                            <span class="stat" data-i18n="unique">🌟 Única</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NUEVA IMAGEN AGREGADA -->
+            <div class="photo-card" data-tilt>
+                <div class="card-glow"></div>
+                <img src="caro6.jpg" alt="Caro 6" class="photo" onclick="openModal(this.src, 5)">
+                <div class="photo-overlay">
+                    <div class="overlay-content">
+                        <h3 class="photo-title" data-i18n="photo-title6">Belleza Única ♡</h3>
+                        <p class="photo-description" data-i18n="photo-desc6">Su belleza es única y especial</p>
+                        <div class="photo-stats">
+                            <span class="stat">💕 <span class="like-count">257</span></span>
+                            <span class="stat" data-i18n="special">✨ Especial</span>
                         </div>
                     </div>
                 </div>
@@ -203,49 +225,49 @@
 
         <!-- Sección de mensajes especiales -->
         <div class="special-messages">
-            <h2 class="section-title" data-i18n="special-moments">Special Moments</h2>
+            <h2 class="section-title" data-i18n="special-moments">Momentos Especiales</h2>
             <div class="messages-grid">
                 <div class="message-card">
                     <div class="message-icon">🌸</div>
-                    <h3 data-i18n="spring">Spring</h3>
-                    <p data-i18n="spring-msg">Like flowers that bloom, your beauty is natural and unique</p>
+                    <h3 data-i18n="spring">Primavera</h3>
+                    <p data-i18n="spring-msg">Como las flores que florecen, tu belleza es natural y única</p>
                 </div>
                 <div class="message-card">
                     <div class="message-icon">⭐</div>
-                    <h3 data-i18n="shine">You Shine</h3>
-                    <p data-i18n="shine-msg">You are the brightest star wherever you are</p>
+                    <h3 data-i18n="shine">Brillas</h3>
+                    <p data-i18n="shine-msg">Eres la estrella más brillante en cualquier lugar donde estés</p>
                 </div>
                 <div class="message-card">
                     <div class="message-icon">💎</div>
-                    <h3 data-i18n="valuable">Valuable</h3>
-                    <p data-i18n="valuable-msg">Your friendship is a treasure I value every day</p>
+                    <h3 data-i18n="valuable">Valiosa</h3>
+                    <p data-i18n="valuable-msg">Tu amistad es un tesoro que valoro cada día</p>
                 </div>
             </div>
         </div>
 
         <!-- Timeline de recuerdos -->
         <div class="timeline-section">
-            <h2 class="section-title" data-i18n="memory-timeline">Memory Timeline</h2>
+            <h2 class="section-title" data-i18n="memory-timeline">Línea de Recuerdos</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3 data-i18n="first-meeting">First meeting</h3>
-                        <p data-i18n="first-meeting-desc">The day I met an incredible person</p>
+                        <h3 data-i18n="first-meeting">Primer encuentro</h3>
+                        <p data-i18n="first-meeting-desc">El día que conocí a una persona increíble</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3 data-i18n="special-moments-timeline">Special moments</h3>
-                        <p data-i18n="special-moments-desc">Every conversation, every shared laugh</p>
+                        <h3 data-i18n="special-moments-timeline">Momentos especiales</h3>
+                        <p data-i18n="special-moments-desc">Cada conversación, cada risa compartida</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3 data-i18n="today">Today</h3>
-                        <p data-i18n="today-desc">Celebrating how wonderful you are</p>
+                        <h3 data-i18n="today">Hoy</h3>
+                        <p data-i18n="today-desc">Celebrando lo maravillosa que eres</p>
                     </div>
                 </div>
             </div>
@@ -253,11 +275,11 @@
         
         <div class="footer">
             <div class="footer-content">
-                <p class="footer-text" data-i18n="footer-message">With much love and appreciation 💕</p>
+                <p class="footer-text" data-i18n="footer-message">Con mucho cariño y aprecio 💕</p>
                 <div class="footer-stats">
-                    <span><span data-i18n="photos">💝 Photos:</span> 5</span>
-                    <span><span data-i18n="time-spent">⏰ Time on page:</span> <span id="timeSpent">0</span>s</span>
-                    <span><span data-i18n="love-level">💕 Love level:</span> ∞</span>
+                    <span><span data-i18n="photos">💝 Fotos:</span> 6</span>
+                    <span><span data-i18n="time-spent">⏰ Tiempo en la página:</span> <span id="timeSpent">0</span>s</span>
+                    <span><span data-i18n="love-level">💕 Nivel de cariño:</span> ∞</span>
                 </div>
             </div>
         </div>
@@ -267,7 +289,7 @@
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <div class="modal-content">
-            <img id="modalImage" src="/caro1.jpg" alt="Imagen ampliada">
+            <img id="modalImage" src="/placeholder.svg" alt="Imagen ampliada">
             <div class="modal-nav">
                 <button class="modal-nav-btn prev" onclick="navigateModal(-1)">❮</button>
                 <button class="modal-nav-btn next" onclick="navigateModal(1)">❯</button>
@@ -277,7 +299,7 @@
                 <p id="modalDescription">Description</p>
                 <button class="like-btn" onclick="likePhoto()">
                     <span class="heart-icon">♡</span>
-                    <span class="like-text" data-i18n="like">Like</span>
+                    <span class="like-text" data-i18n="like">Me gusta</span>
                 </button>
             </div>
         </div>

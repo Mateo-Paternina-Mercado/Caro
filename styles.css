@@ -1035,3 +1035,8 @@ body {
         transform: none;
     }
 }
+
+/* Añadir animación para la nueva tarjeta */
+.photo-card:nth-child(6) {
+  animation-delay: 1.2s;
+}
